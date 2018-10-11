@@ -8,7 +8,7 @@ public class BuildSystem : MonoBehaviour {
     public LayerMask layer;
     private GameObject buildThing;
 
-    public float stickToletance = 1.5f;
+    public float stickTolerance = .05f;
 
     public bool isBuilding = false;
     private bool pauseBuilding = false;
@@ -23,31 +23,51 @@ public class BuildSystem : MonoBehaviour {
         //stop
         if(Input.GetMouseButtonDown(0))
         {
-            StopBuild();
+            if(buildThing.GetComponent<Preview_Obj>().isSnapped)
+            {
+                StopBuild();
+            }
+
+                
+            
         }
         //isbld
-        if(isBuilding)
+
+        if (isBuilding)
         {
-            DoBuildRay();
+            if (pauseBuilding)
+            { 
+                float mouseX = Input.GetAxis("Mouse X");
+                float mouseZ = Input.GetAxis("Mouse Y");
+
+                if (Mathf.Abs(mouseX) >= stickTolerance || Mathf.Abs(mouseZ) >= stickTolerance)
+                {
+                    pauseBuilding = false;
+                }
+            }
+            else
+            {
+                DoBuildRay();
+            }
         }
     }
 
     public void NewBuild(GameObject _obj)
     {
         Vector3 pos = transform.position + (Vector3.forward * 7f);
-        GameObject go = Instantiate(_obj, pos, Quaternion.identity);
+        GameObject go = Instantiate(_obj, pos, Quaternion.Euler(-90, 0, 0));
         buildThing = go;
         isBuilding = true;
     }
 
-    private void pauseBuild()
+    public void PauseBuild(bool value)
     {
-
+        pauseBuilding = value;
     }
 
     private void StopBuild()
     {
-        //buildThing.GetComponent<Preview_Obj>().Place();
+        buildThing.GetComponent<Preview_Obj>().Place();
         buildThing = null;
         isBuilding = false;
 
@@ -58,7 +78,7 @@ public class BuildSystem : MonoBehaviour {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if(Physics.Raycast(ray, out hit, 15f, layer))
+        if(Physics.Raycast(ray, out hit, 5f, layer))
         {
             buildThing.transform.position = hit.point;
         }
