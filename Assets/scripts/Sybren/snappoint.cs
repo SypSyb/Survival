@@ -7,6 +7,7 @@ public class snappoint : MonoBehaviour {
     SphereCollider myCollider;
     BuildSystem buildSystem;
 
+
     private bool canSnap = false;
     public string TagImLookingFor;
 
@@ -28,10 +29,22 @@ public class snappoint : MonoBehaviour {
             if(other.tag == TagImLookingFor)
             {
                 other.transform.position = transform.position;
-                other.transform.rotation = Quaternion.Euler(-90, 0, 0);
+                if (other.tag == "Pillar")
+                {
+                    other.transform.rotation = Quaternion.Euler(0, 0, 90);
+                }
+                else
+                {
+                    other.transform.rotation = Quaternion.Euler(-90, 0, 0);
+                }
+
+                other.GetComponent<Preview_Obj>().ToggleSnaps(true);
 
                 canSnap = false;
                 buildSystem.PauseBuild(true);
+
+
+                
             }
         }
     }

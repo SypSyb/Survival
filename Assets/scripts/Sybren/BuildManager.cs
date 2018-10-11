@@ -7,54 +7,34 @@ public class BuildManager : MonoBehaviour {
     public BuildSystem buildSystem;
     public GameObject previewFoundation;
     public GameObject previewWall;
-
+    public GameObject previewPillar;
     public GameObject previewCeleing;
 
     public int buildingSwitch;
 	
 	// Update is called once per frame
 	void Update () {
-		
-        if(Input.GetKeyDown(KeyCode.B) && buildSystem.isBuilding == false)
+        if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            switch (buildingSwitch)
-            {
-                case 2:
-                    buildSystem.NewBuild(previewCeleing);
-                    break;
-
-                case 1:
-                    buildSystem.NewBuild(previewWall);
-                    break;
-
-                default:
-                    buildSystem.NewBuild(previewFoundation);
-                    break;
-
-            }
+            buildSystem.NewBuild(previewFoundation);
         }
-        if(buildSystem.isBuilding == true)
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
-            {
-                buildingSwitch++;
-            }
-            else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
-            {
-                buildingSwitch--;
-            }
-
-            if(buildingSwitch > 2)
-            {
-                buildingSwitch = 0;
-            }
-            if(buildingSwitch < 0)
-            {
-                buildingSwitch = 2;
-            }
+            buildSystem.NewBuild(previewWall);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            buildSystem.NewBuild(previewCeleing);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            buildSystem.NewBuild(previewPillar);
         }
 
 
 
-	}
+
+
+
+    }
 }
