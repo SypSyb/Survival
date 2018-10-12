@@ -18,7 +18,7 @@ public class BuildSystem : MonoBehaviour {
         //rotate
         if(Input.GetKeyDown(KeyCode.R))
         {
-            buildThing.transform.Rotate(0, 90f, 0);
+            buildThing.transform.Rotate(0, 0, 90);
         }
         //stop
         if(Input.GetMouseButtonDown(0))
@@ -78,7 +78,7 @@ public class BuildSystem : MonoBehaviour {
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if(Physics.Raycast(ray, out hit, 5f, layer))
+        if(Physics.Raycast(ray, out hit, 10f, layer))
         {
             buildThing.transform.position = hit.point;
         }

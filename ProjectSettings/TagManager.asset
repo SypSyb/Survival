@@ -6,6 +6,9 @@ TagManager:
   tags:
   - SnapPoint
   - Foundation
+  - Wall
+  - Pillar
+  - Ceiling
   layers:
   - Default
   - TransparentFX

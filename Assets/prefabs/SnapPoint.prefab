@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905f6c9d77eb5bd4b8826e0ba2f5457d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TagImLookingFor: 
 --- !u!135 &135235749822417346
 SphereCollider:
   m_ObjectHideFlags: 1

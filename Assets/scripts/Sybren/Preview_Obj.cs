@@ -23,7 +23,7 @@ public class Preview_Obj : MonoBehaviour {
 
     public void Place()
     {
-        GameObject go = Instantiate(realThing, transform.position, Quaternion.Euler(-90, 0, 0));
+        GameObject go = Instantiate(realThing, transform.position, transform.rotation);
         go.GetComponent<Actual_Obj>().TurnOnSnaps();
         Destroy(gameObject);
     }
