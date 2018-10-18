@@ -1,11 +1,6 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
-Cmd: preprocess
-  insize=997 outsize=1797 ok=1
-Cmd: preprocess
-  insize=6327 outsize=1253 ok=1
-Cmd: preprocess
-  error: 1 plat 21 at (36): Program uses geometry shaders, treating as if '#pragma require geometry' was present
-  insize=11641 outsize=1379 ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
