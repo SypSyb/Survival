@@ -67,6 +67,7 @@
     <Compile Include="Assets\scripts\Sybren\Preview_Obj.cs" />
     <Compile Include="Assets\scripts\Sybren\snappoint.cs" />
     <Compile Include="Assets\scripts\Thom\Player.cs" />
+    <Compile Include="Assets\scripts\Thom\ThirdPersonCamera.cs" />
     <None Include="Assets\Imported stuff\WoodsLifestyle\VERSION.txt" />
     <None Include="Assets\Imported stuff\WoodsLifestyle\TextureSystem.txt" />
     <None Include="Assets\Imported stuff\AxeyWorks\Low Poly v2\Shaders\AxeyWorksPolyWaterBlendFoam.shader" />

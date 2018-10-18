@@ -4,52 +4,33 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    [Header("Camera's")]
     public GameObject thirdPersonCam;
     public GameObject firstPersonCam;
 
-    public GameObject pivot;
+    [Header("Third Person Camera Settings")]
 
-    public GameObject camTarget;
+    public Vector3 cameraOffset;
+    public GameObject playerBody;
 
-    private int cameraMode = 1;
 
+    [Header("Movement Settings")]
     public float movementSpeed = 10;
     public float turningSpeed = 60;
+
+    private int cameraMode = 1;
 
     void Update()
     {
         Walk();
     }
 
-    void LateUpdate()
-    {
-        ThirdPersonCamera();
-        FirstPersonCamera();
-    }
-
-    public void ThirdPersonCamera()
-    {
-        thirdPersonCam.transform.LookAt(camTarget.transform);
-
-        float horizontal = Input.GetAxis("Mouse X");
-        float upDown = Input.GetAxis("Mouse Y");
-
-        pivot.transform.Rotate(0, horizontal, 0);
-        pivot.transform.Rotate(upDown, 0, 0);
-
-    }
-
-    public void FirstPersonCamera()
-    {
-
-    }
-
     void Walk()
     {
         float horizontal = Input.GetAxis("Horizontal") * turningSpeed * Time.deltaTime;
-        transform.Rotate(0, horizontal, 0);
+        playerBody.transform.Rotate(0, horizontal, 0);
 
         float vertical = Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime;
-        transform.Translate(0, 0, vertical);
+        playerBody.transform.Translate(0, 0, vertical);
     }
 }
