@@ -78,11 +78,11 @@
     <None Include="Assets\Imported stuff\WoodsLifestyle\NOTES.txt" />
     <None Include="Assets\Imported stuff\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.cginc" />
     <None Include="Assets\Imported stuff\AxeyWorks\Low Poly v2\Shaders\AxeyWorksDistortion.shader" />
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/GD2018/Desktop/Shite/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/GD2018/Desktop/Shite/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>C:/Users/GD2018/Desktop/Shite/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -12,12 +12,15 @@ public class ThirdPersonCamera : MonoBehaviour {
 
     [Header("Settings")]
     public float speed;
+    public float sensitivityXZ;
+    public float sensitivityY;
 
     private void LateUpdate()
     {
         transform.LookAt(target.transform.position);
-        float horizontal = Input.GetAxis("Mouse X");
-        float upDown = Input.GetAxis("Mouse Y");
+        float horizontal = Input.GetAxis("Mouse X") * sensitivityXZ;
+        float upDown = Input.GetAxis("Mouse Y") * sensitivityY;
+        upDown = -upDown;
 
         rotatorXZ.transform.Rotate(0, horizontal, 0);
         rotatorY.transform.Rotate(upDown, 0, 0);
