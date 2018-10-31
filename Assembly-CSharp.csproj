@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{FAE74FDB-A3BF-56EA-8E41-0250AEBC0B25}</ProjectGuid>
+    <ProjectGuid>{496867AE-038B-27C9-5AD5-96150CD01DBA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,13 +61,14 @@
   <ItemGroup>
     <Compile Include="Assets\Imported stuff\AxeyWorks\Low Poly v2\Scripts\AxeyWorksMobileDistortion.cs" />
     <Compile Include="Assets\Imported stuff\AxeyWorks\Low Poly v2\Scripts\PolyWater.cs" />
+    <Compile Include="Assets\scripts\Jeremy\InventoryManager.cs" />
+    <Compile Include="Assets\scripts\Jeremy\Item.cs" />
+    <Compile Include="Assets\scripts\Jeremy\ItemDisplay.cs" />
     <Compile Include="Assets\scripts\Sybren\Actual_Obj.cs" />
     <Compile Include="Assets\scripts\Sybren\BuildManager.cs" />
     <Compile Include="Assets\scripts\Sybren\BuildSystem.cs" />
     <Compile Include="Assets\scripts\Sybren\Preview_Obj.cs" />
     <Compile Include="Assets\scripts\Sybren\snappoint.cs" />
-    <Compile Include="Assets\scripts\Thom\Player.cs" />
-    <Compile Include="Assets\scripts\Thom\ThirdPersonCamera.cs" />
     <None Include="Assets\Imported stuff\WoodsLifestyle\VERSION.txt" />
     <None Include="Assets\Imported stuff\WoodsLifestyle\TextureSystem.txt" />
     <None Include="Assets\Imported stuff\AxeyWorks\Low Poly v2\Shaders\AxeyWorksPolyWaterBlendFoam.shader" />
@@ -76,10 +77,10 @@
     <None Include="Assets\Imported stuff\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.cginc" />
     <None Include="Assets\Imported stuff\AxeyWorks\Low Poly v2\Shaders\AxeyWorksDistortion.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/GD2018/Desktop/Shite/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/gd/Desktop/SurvivalFolder/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/GD2018/Desktop/Shite/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/gd/Desktop/SurvivalFolder/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -255,12 +256,6 @@
     <Reference Include="Unity.Locator">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>C:/Users/GD2018/Desktop/Shite/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
-    </Reference>
-    <Reference Include="Vuforia.UnityExtensions">
-      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -283,13 +278,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/GD2018/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/gd/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
-      <HintPath>C:/Users/GD2018/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/gd/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/GD2018/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/gd/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
@@ -321,7 +316,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{8C504F26-9BA6-A385-372E-A78F1E57D686}</Project>
+      <Project>{F9556BE3-7DF5-BFAA-7B62-7DBEDE2443D9}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
